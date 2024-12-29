@@ -4,14 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint './src/**/*.{js,ts,jsx,tsx}' --fix",
     "format": "prettier --write './src/**/*.{js,ts,jsx,tsx,json,css,scss,md}'",
     "lint:check": "eslint './src/**/*.{js,ts,jsx,tsx}'",
     "format:check": "prettier --check './src/**/*.{js,ts,jsx,tsx,json,css,scss,md}'",
+    "typecheck": "tsc --noEmit",
     "test": "vitest",
+    "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
@@ -23,7 +25,8 @@
     "primereact": "^10.8.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-redux": "^9.2.0"
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
@@ -33,6 +36,7 @@
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.18.2",
     "@typescript-eslint/parser": "^8.18.2",
     "@vitejs/plugin-react": "^4.3.4",

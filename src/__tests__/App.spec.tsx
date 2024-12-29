@@ -14,18 +14,18 @@ describe('App Component', () => {
 
   it('renders the initial count value', () => {
     render(<App />);
-    const button = screen.getByRole('button', { name: /count is 0/i }); // Use getByRole to retrieve a single button
+    const button = screen.getByRole('button', { name: /Count/i }); // Use getByRole to retrieve a single button
 
     expect(button).toBeInTheDocument();
   });
 
   it('increments count value on button click', () => {
     render(<App />);
-    const button = screen.getByRole('button', { name: /count is 0/i }); // Use getByRole
+    const button = screen.getByRole('button', { name: /Count/i }); // Use getByRole
 
     fireEvent.click(button);
 
-    expect(button.textContent).toBe('count is 1');
+    expect(button.textContent?.replace(/\u00a0/g, ' ')).toBe('Count 1');
   });
 
   it('renders documentation links', () => {
